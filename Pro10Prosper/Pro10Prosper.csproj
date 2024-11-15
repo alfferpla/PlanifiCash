@@ -69,11 +69,13 @@
 
 	<ItemGroup>
 	  <Folder Include="MVVM\Models\" />
-	  <Folder Include="MVVM\Views\" />
 	  <Folder Include="MVVM\ViewModels\" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="MVVM\Views\DashBoardPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Resources\Styles\AppStyles.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
