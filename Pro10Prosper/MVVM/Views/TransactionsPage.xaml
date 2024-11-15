@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pro10Prosper.MVVM.Views.TransactionsPage"
+             Title="TransactionsPage">
+
+    <Grid RowDefinitions=".15*,.15*,.70*">
+        <RoundRectangle Grid.RowSpan="2" StyleClass="TopRectangle"/>
+        <VerticalStackLayout StyleClass="Header">
+            <Label StyleClass="HeaderSubTitle" 
+                   Text="Hacer transacción"/>
+        </VerticalStackLayout>
+
+        <Grid 
+            Grid.Row="1" 
+            Grid.RowSpan="2" 
+            StyleClass="BalanceGrid">
+            <RoundRectangle StyleClass="BalanceRectangle"/>
+
+            <VerticalStackLayout Spacing="10" StyleClass="Padding25">
+                <Label Text="Nombre de la transacción"/>
+                <Frame StyleClass="FrameBorder">
+                    <Entry Text="Suscripción a BasicFit"/>
+                </Frame>
+                <Label StyleClass="MarginT15" Text="Importe"/>
+                <Frame StyleClass="FrameBorder">
+                    <Entry Text="49,00€"
+                           VerticalOptions="Center"
+                           Keyboard="Numeric"/>
+                </Frame>
+                <Label StyleClass="MarginT15" Text="Fecha"/>
+                <Frame StyleClass="FrameBorder">
+                    <DatePicker/>
+                </Frame>
+                <HorizontalStackLayout>
+                    <CheckBox IsChecked="True"/>
+                    <Label Text="¿Es un ingreso?"/>
+                </HorizontalStackLayout>
+
+                <Button StyleClass="MarginT15" Text="Confirmar"/>
+                <Button StyleClass="MarginT15, RedControl" Text="Cancelar"/>
+
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>
