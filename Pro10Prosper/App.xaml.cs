@@ -8,7 +8,7 @@ namespace Pro10Prosper
         {
             InitializeComponent();
 
-            MainPage = new TransactionsPage();
+            MainPage = new StatisticsPage();
         }
     }
 }
