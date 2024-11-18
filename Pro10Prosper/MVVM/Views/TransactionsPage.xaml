@@ -20,25 +20,27 @@
             <VerticalStackLayout Spacing="10" StyleClass="Padding25">
                 <Label Text="Nombre de la transacción"/>
                 <Frame StyleClass="FrameBorder">
-                    <Entry Text="Suscripción a BasicFit"/>
+                    <Entry Text="{Binding Transaction.Name}"/>
                 </Frame>
                 <Label StyleClass="MarginT15" Text="Importe"/>
                 <Frame StyleClass="FrameBorder">
-                    <Entry Text="49,00€"
+                    <Entry Text="{Binding Transaction.Amount}"
                            VerticalOptions="Center"
                            Keyboard="Numeric"/>
                 </Frame>
                 <Label StyleClass="MarginT15" Text="Fecha"/>
                 <Frame StyleClass="FrameBorder">
-                    <DatePicker/>
+                    <DatePicker Date="{Binding Transaction.TransactionDate}"/>
                 </Frame>
                 <HorizontalStackLayout>
-                    <CheckBox IsChecked="True"/>
+                    <CheckBox IsChecked="{Binding Transaction.IsIncome}"/>
                     <Label Text="¿Es un ingreso?"/>
                 </HorizontalStackLayout>
 
-                <Button StyleClass="MarginT15" Text="Confirmar"/>
-                <Button StyleClass="MarginT15, RedControl" Text="Cancelar"/>
+                <Button StyleClass="MarginT15" Text="Confirmar" x:Name="Save"
+                        Clicked="Save_Clicked"/>
+                <Button StyleClass="MarginT15, RedControl" Text="Cancelar" x:Name="Cancel"
+                        Clicked="Cancel_Clicked"/>
 
             </VerticalStackLayout>
         </Grid>
