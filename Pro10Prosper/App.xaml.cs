@@ -16,7 +16,7 @@ namespace Pro10Prosper
 
             TransactionsRepo = _transcationsRepo;
 
-            MainPage = new TransactionsPage();
+            MainPage = new NavigationPage(new DashBoardPage());
         }
     }
 }
