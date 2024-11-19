@@ -5,13 +5,15 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PropertyChanged;
 
 
 namespace Pro10Prosper.MVVM.ViewModels
 {
+    [AddINotifyPropertyChangedInterface]
     public class DashboardViewModel
     {
-        public ObservableCollection<Transaction> Transactions { get; set; }
+        public ObservableCollection<Transaction>? Transactions { get; set; }
 
         public decimal Balance { get; set; }
         public decimal Income { get; set; }
