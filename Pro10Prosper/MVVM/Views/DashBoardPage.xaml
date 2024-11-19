@@ -7,6 +7,7 @@
 
     <ContentPage.Resources>
         <converters:AmountToCurrencyConverter x:Key="AmountConverter"/>
+        <converters:AmountToColorConverter x:Key="ColorConverter"/>
     </ContentPage.Resources>
     
     <Grid RowDefinitions=".15*,.15*,.15*,.55*">
@@ -87,7 +88,8 @@
                                 Grid.RowSpan="2"
                                 Grid.Column="1"
                                 StyleClass="ListAmount"
-                                Text="{Binding Amount, Converter={StaticResource AmountConverter}, ConverterParameter={x:Reference lblIsIncome}}"/>
+                                Text="{Binding Amount, Converter={StaticResource AmountConverter}, ConverterParameter={x:Reference lblIsIncome}}"
+                                TextColor="{Binding Amount, Converter={StaticResource ColorConverter}, ConverterParameter={x:Reference lblIsIncome}}"/>
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
