@@ -79,7 +79,7 @@
                             <Label
                                 Grid.Row="1"
                                 StyleClass="SmallFont"
-                                Text="{Binding OperationDate, StringFormat='{0:MM/dd/yyyy}'}"/>
+                                Text="{Binding HumanDate}"/>
 
                             <Label x:Name="lblIsIncome"
                                    IsVisible="False"

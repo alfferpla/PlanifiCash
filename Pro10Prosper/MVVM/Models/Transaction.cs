@@ -1,4 +1,5 @@
-﻿using Pro10Prosper.Abstractions;
+﻿using Humanizer;
+using Pro10Prosper.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +14,6 @@ namespace Pro10Prosper.MVVM.Models
         public decimal Amount { get; set; }
         public bool IsIncome { get; set; }
         public DateTime OperationDate { get; set; }
+        public string HumanDate { get{ return OperationDate.Humanize(); } }
     }
 }
